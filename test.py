@@ -1,12 +1,13 @@
 import streamlit as st 
 
 def main():
-  st.title("Streamlit WebApp")
+  st.title("Convert text to a list")
   
-  number = st.number_input("Enter your number", value=50, step=5, key='number')
+  text = st.text_input("Enter your text", key="text")
   
-  if st.button("divide by 5"):
-    st.write(f"{st.session_state.number/5}")
+  
+  if st.button("convert"):
+    st.write(list(text))
 
 if __name__ == "__main__":
   main()
