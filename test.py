@@ -8,7 +8,7 @@ def main():
   if st.button("divide by 5"):
     
     st.session_state.number = st.session_state.number/5
-  st.write(f"{st.session_state.number/5}")
+  st.write(f"{st.session_state.number}")
 
 if __name__ == "__main__":
   main()
