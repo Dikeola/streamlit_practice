@@ -16,10 +16,12 @@ def main():
   if st.session_state.screen == 2:
     st.write("You walked left and found a treasure chest! You Win!")
     if st.button("Play Again!"):
+      st.session_state.screen=1
       st.rerun()
   if st.session_state.screen == 3:
     st.write("You walked right and fell into a trap! Game Over.")
     if st.button("Play Again!"):
+      st.session_state.screen=1
       st.rerun()
 
   
