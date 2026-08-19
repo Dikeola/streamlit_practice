@@ -2,8 +2,9 @@ import streamlit as st
 
 def main():
   st.title('Streamlit web app')
-  name = st.text_input("Enter your name:")
-  st.write(f"Welcome, {name}")
+  counter = 0
+  if st.button(""):
+    st.write(f"count {counter+1}")
 
 if __name__ == "__main__":
   main()
