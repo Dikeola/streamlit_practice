@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 
 def main():
   st.title("The \"Secret Number\" Guessing Game")
