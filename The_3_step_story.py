@@ -3,7 +3,7 @@ import streamlit as st
 def main():
   st.title("The 3-Step Story")
   if "screen" not in st.session_state:
-    screen = 1
+    st.session_state.screen = 1
 
   if st.session_state.screen == 1:
     st.write("You are standing in a dark forest. There is a path to the left and a cave to the right.")
@@ -19,6 +19,8 @@ def main():
       st.rerun
   if st.session_state.screen == 3:
     st.write("You walked right and fell into a trap! Game Over.")
+    if st.button("Play Again!"):
+      st.rerun
 
   
 if __name__ == "__main__":
