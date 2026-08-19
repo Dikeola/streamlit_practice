@@ -6,11 +6,11 @@ def main():
 
   number = random.randint(1,100)
 
-  guess = st.number_input("Guess The number")
-  if guess < number:
+  guess = st.text_input("Guess The number")
+  if int(guess) < number:
     st.write("Too Low! Try again.")
     
-  elif guess > number:
+  elif int(guess) > number:
     st.write("Too High! Try again.")
 
   else:
