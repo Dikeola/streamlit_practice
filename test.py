@@ -1,12 +1,8 @@
-import streamlit as st
+import streamlit as st 
 
-def main():
-  st.title('Streamlit web app')
-  if "counter" not in st.session_state:
-    st.session_state.counter = 0
-  if st.button("Add 1"):
-    st.session_state.counter +=1
-  st.write(f"count {st.session_state.counter+1}")
+st.title("Streamlit WebApp")
 
-if __name__ == "__main__":
-  main()
+st.session_state.number = st.number_input(value=50, min=10,max=1000)
+
+if st.button("divide by 5"):
+  st.write(f"{st.session_state.number/5}"
