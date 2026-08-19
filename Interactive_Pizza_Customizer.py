@@ -10,6 +10,6 @@ def main():
   if st.button("Display Order"):
     st.write(f"You ordered a {size} pizza on {crust} Crust.")
     st.write(f"Toppings: {toppings}")
-    st.write("Garlic Dip included: {extra}.")
+    st.write(f"Garlic Dip included: {extra}.")
 if __name__ == "__main__":
   main()
