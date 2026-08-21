@@ -33,8 +33,8 @@ def main():
 
   if "tracker" not in st.session_state:
     st.session_state.tracker = list(st.session_state.random_word)
-  st.session_state.guess_ = "---"
-  guess = st.text_input("Guess a character: ", value=st.session_state.guess_)
+  
+  guess = st.text_input("Guess a character: ", value="---")
 
   if guess in st.session_state.tracker:
     while True:
