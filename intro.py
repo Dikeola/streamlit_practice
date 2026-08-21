@@ -51,7 +51,7 @@ def main():
       st.write("CONGRATULATIONS!")
       st.write(f"The word is:  {st.session_state.random_word}")
 
-      if st.button("Reset Game"):
+  if st.button("Reset Game"):
         for key in list(st.session_state.keys()):
           del st.session_state[key]
         st.rerun()
