@@ -28,7 +28,7 @@ def main():
 ]
   if "random_word" not in st.session_state:
     st.session_state.random_word = random.choice(words)
-  st.session_state.guesses = list("_"*len(random_word))
+  st.session_state.guesses = list("_"*len(st.session_state.random_word))
 
   st.write(st.session_state.random_word)
   
