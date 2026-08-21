@@ -33,7 +33,7 @@ def main():
   while True:
     guess = st.text_input("Guess a character: ")
 
-    if guess in st.session_state.random_word:
+    if guess in random_word:
       st.write("Correct!")
     else:
         st.write("Try Again!")  
