@@ -31,7 +31,7 @@ def main():
     st.session_state.guesses = list("_"*len(st.session_state.random_word))
 
   while True:
-    guess = st.text_input("Guess a character: ")
+    guess = st.text_input("Guess a character: ", key='guess')
 
     if guess in "random_word":
       st.write("Correct!")
