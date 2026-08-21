@@ -32,8 +32,9 @@ def main():
   guess = st.text_input("Guess a character: ", value="---")
 
   if guess in st.session_state.random_word:
-    st.write("Correct!")
-    st.write(st.session_state.random_word)
+    pos = st.session_state.random_word.find(guess)
+    st.session_state.guesses[pos] = guess
+    st.write(",".join(st.session_state.guesses))
   else:
     st.write("Try Again!")
 
