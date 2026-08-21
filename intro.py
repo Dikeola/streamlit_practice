@@ -26,7 +26,11 @@ def main():
     "iron", "jewel", "karma", "lunar", "magic", "noble", "oasis", "palm", "quartz", "rust",
     "silk", "tide", "urban", "vivid", "wind", "xeric", "yolk", "zinc"
 ]
-  st.write(random.choice(words))
+  if "random_word" not in st.session_state:
+    st.session_state.random_word = random.choice(words)
+  st.session_state.guesses = list("_"*len(random_word))
+
+  st.write(st.session_state.random_word)
   
 if __name__ == "__main__":
   main()
