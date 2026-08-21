@@ -2,7 +2,7 @@ import streamlit as st
 import random 
 
 def main():
-  st.title("Introduction to Streamlit")
+  st.title("Hangman Game")
   words = [
     "apple", "brave", "cloud", "dance", "eagle", "flame", "grape", "house",
     "ivory", "jewel", "kneel", "lemon", "mango", "night", "ocean", "piano",
@@ -28,9 +28,16 @@ def main():
 ]
   if "random_word" not in st.session_state:
     st.session_state.random_word = random.choice(words)
-  st.session_state.guesses = list("_"*len(st.session_state.random_word))
+    st.session_state.guesses = list("_"*len(st.session_state.random_word))
 
-  st.write(st.session_state.random_word)
+  while True:
+    guess = st.text_input("Guess a character: ")
+
+    if guess in st.session_state.random_word:
+      st.write("Correct!")
+    else:
+        st.write("Try Again!")  
+    
   
 if __name__ == "__main__":
   main()
