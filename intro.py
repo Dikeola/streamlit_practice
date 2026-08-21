@@ -50,15 +50,12 @@ def main():
     else:
       st.write("CONGRATULATIONS!")
       st.write(f"The word is:  {st.session_state.random_word}")
-      time.sleep(3)
-      st.session_state.decision = st.text_input("Do you want to play again?", value="---")
-      if st.session_state.decision == "Yes" or st.session_state.decision == "yes":
-        st.reset()
+
+      if st.button("Reset Game"):
+        for key in list(st.session_state.keys()):
+          del st.session_state[key]
+        st.rerun()
         
-      elif st.session_state.decision == "No" or st.session_state.decision == "no":
-        st.write("Thank You for playing.")
-        time.sleep(3)
-        st.reset()
         
   else:
     st.write("Try Again!")
