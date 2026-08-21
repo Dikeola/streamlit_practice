@@ -1,5 +1,6 @@
 import streamlit as st
 import random 
+import time
 
 def main():
   st.title("Hangman Game")
@@ -39,8 +40,9 @@ def main():
     else:
       st.write("CONGRATULATIONS!")
       st.write("The word is:  {st.session_state.random_word}")
-
-      st.session_state.decision = st.checkbox("Do you want to play again?", ['Yes','No'])
+      time.sleep(3)
+      st.session_state.decision = st.text_input("Do you want to play again?", value="---")
+      time.sleep(30)
       if st.session_state.decision == "Yes":
         st.rerun()
       else:
