@@ -3,7 +3,30 @@ import random
 
 def main():
   st.title("Introduction to Streamlit")
-  
+  words = [
+    "apple", "brave", "cloud", "dance", "eagle", "flame", "grape", "house",
+    "ivory", "jewel", "kneel", "lemon", "mango", "night", "ocean", "piano",
+    "queen", "river", "storm", "tiger", "umbrella", "violet", "whale", "xenon",
+    "yacht", "zebra", "anchor", "basket", "castle", "dragon", "engine", "falcon",
+    "garden", "hammer", "island", "jungle", "kitten", "lantern", "mountain", "nature",
+    "orange", "pencil", "quality", "rocket", "sunset", "tent", "uniform", "valley",
+    "window", "yellow", "bridge", "castle", "desert", "forest", "guitar", "hospital",
+    "internet", "jacket", "kitchen", "library", "market", "network", "oxygen", "paradise",
+    "question", "rainbow", "safari", "teacher", "universe", "village", "weather", "xylophone",
+    "yogurt", "zephyr", "adventure", "butterfly", "chocolate", "dinosaur", "elephant", "firework",
+    "galaxy", "horizon", "iceberg", "jigsaw", "kangaroo", "lighthouse", "magnificent", "nebula",
+    "orchestra", "penguin", "quartz", "rainforest", "squirrel", "telescope", "unicorn", "volcano",
+    "wonderful", "yesterday", "zucchini", "algorithm", "backpack", "cactus", "diamond", "echo",
+    "flamingo", "gratitude", "helicopter", "illusion", "jubilee", "keyboard", "landscape", "mystery",
+    "navigation", "orchid", "puzzle", "quintessential", "relic", "sunset", "tornado", "utopia",
+    "victory", "whisper", "xray", "yawn", "zodiac", "adventure", "breeze", "candle", "dream",
+    "echo", "frost", "ghost", "honey", "ivy", "jade", "kite", "lace", "moon", "ninja",
+    "owl", "pearl", "quill", "rose", "star", "tulip", "unity", "vase", "wave", "xmas",
+    "yard", "zest", "atlas", "beacon", "copper", "dew", "ember", "fable", "glow", "haze",
+    "iron", "jewel", "karma", "lunar", "magic", "noble", "oasis", "palm", "quartz", "rust",
+    "silk", "tide", "urban", "vivid", "wind", "xeric", "yolk", "zinc"
+]
+  st.write(random.choice(words))
   
 if __name__ == "__main__":
   main()
