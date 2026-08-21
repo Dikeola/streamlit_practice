@@ -31,5 +31,10 @@ def main():
     st.session_state.guesses = list("_"*len(st.session_state.random_word))
   guess = st.text_input("Guess a character: ")
 
+  if guess in st.session_state.random_word:
+    st.write("Correct!")
+  else:
+    st.write("Try Again!")
+
 if __name__ == "__main__":
   main()
