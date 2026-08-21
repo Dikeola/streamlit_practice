@@ -33,6 +33,7 @@ def main():
 
   if guess in st.session_state.random_word:
     st.write("Correct!")
+    st.write(st.session_state.random_word)
   else:
     st.write("Try Again!")
 
