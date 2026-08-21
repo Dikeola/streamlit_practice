@@ -38,11 +38,12 @@ def main():
   if guess in st.session_state.tracker:
     while True:
       pos = "".join(st.session_state.tracker).find(guess)
-      st.session_state.tracker[pos] = "_"
-      st.session_state.guesses[pos] = guess
+      
       if pos == -1:
         break
-      
+      else:
+        st.session_state.tracker[pos] = "_"
+        st.session_state.guesses[pos] = guess
         
     if "_" in st.session_state.guesses:
       st.write(",".join(st.session_state.guesses))
