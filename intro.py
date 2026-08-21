@@ -34,7 +34,17 @@ def main():
   if guess in st.session_state.random_word:
     pos = st.session_state.random_word.find(guess)
     st.session_state.guesses[pos] = guess
-    st.write(",".join(st.session_state.guesses))
+    if "_" in guesses:
+      st.write(",".join(st.session_state.guesses))
+    else:
+      st.write("CONGRATULATIONS!")
+      st.write("The word is:  {st.session_state.random_word}")
+
+      st.session_state.decision = st.checkbox("Do you want to play again?", ['Yes','No'])
+      if st.session_state.decision == "Yes":
+        st.rerun()
+      else:
+        st.write("Thank You for playing.")
   else:
     st.write("Try Again!")
 
