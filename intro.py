@@ -34,7 +34,7 @@ def main():
   if guess in st.session_state.random_word:
     pos = st.session_state.random_word.find(guess)
     st.session_state.guesses[pos] = guess
-    if "_" in guesses:
+    if "_" in st.session_state.guesses:
       st.write(",".join(st.session_state.guesses))
     else:
       st.write("CONGRATULATIONS!")
