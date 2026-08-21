@@ -55,6 +55,8 @@ def main():
         st.rerun()
       elif st.session_state.decision.proper() == "No":
         st.write("Thank You for playing.")
+        st.reset()
+        st.rerun()
   else:
     st.write("Try Again!")
 
