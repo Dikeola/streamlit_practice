@@ -30,11 +30,18 @@ def main():
   if "random_word" not in st.session_state:
     st.session_state.random_word = random.choice(words)
     st.session_state.guesses = list("_"*len(st.session_state.random_word))
+    st.session_state.tracker = list(st.session_state.random_word)
   guess = st.text_input("Guess a character: ", value="---")
 
-  if guess in st.session_state.random_word:
-    pos = st.session_state.random_word.find(guess)
-    st.session_state.guesses[pos] = guess
+  if guess in st.session_state.tracker:
+    while True:
+      pos = "".join(st.session_state.tracker).find(guess)
+      st.session_state.tracker[pos] = "_"
+      st.session_state.guesses[pos] = guess
+      if pos == -1:
+        break
+      
+        
     if "_" in st.session_state.guesses:
       st.write(",".join(st.session_state.guesses))
     else:
