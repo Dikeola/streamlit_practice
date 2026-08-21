@@ -52,9 +52,9 @@ def main():
       st.write(f"The word is:  {st.session_state.random_word}")
       time.sleep(3)
       st.session_state.decision = st.text_input("Do you want to play again?", value="---")
-      if st.session_state.decision.proper() == "Yes":
+      if st.session_state.decision == "Yes" or st.session_state.decision == "yes":
         st.rerun()
-      elif st.session_state.decision.proper() == "No":
+      elif st.session_state.decision == "No" or st.session_state.decision == "no":
         st.write("Thank You for playing.")
         st.reset()
         st.rerun()
