@@ -8,6 +8,7 @@ def main():
   fle = st.file_uploader("Choose a CSV file:", type='csv')
   if fle is not None:
     df = pd.read_csv(fle)
-    st.dataframe(df, use_container_width=True)
+    if st.button('Show'):
+      st.dataframe(df.head(), use_container_width=True)
 if __name__ == "__main__":
   main()
