@@ -16,7 +16,7 @@ def main():
     tf_v = tfidf.fit_transform(pd.Series(text))
   
   if st.button("Generate Sentiment Table"):
-    st.write(f"{pd.DataFrame(tf_v.toarray(), columns= tfidf.get_feature_names_out())}")
+    st.dataframe(pd.DataFrame(tf_v.toarray(), columns= tfidf.get_feature_names_out()), use_container_width=True)
   
 if __name__ == "__main__":
   main()
