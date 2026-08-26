@@ -12,7 +12,7 @@ tfidf = TfidfVectorizer()
 def main():
   st.title("Sentiment Analyzer")
   text = st.text_input("Enter your text")
-  if !text.isEmpty():
+  if len(text)>0:
     tf_v = tfidf.fit_transform(pd.Series(text))
   
   if st.button("Generate Sentiment Table"):
