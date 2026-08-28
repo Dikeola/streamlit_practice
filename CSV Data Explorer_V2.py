@@ -5,7 +5,7 @@ import pandas as pd
 def main():
   st.title("CSV Data Explorer Version_2")
 
-  fle = st.file_explorer("Upload your file:", type='csv')
+  fle = st.file_uploader("Upload your file:", type='csv')
   choice = st.sidebar.selectbox('choice',['yes','no'])
   if fle is not None:
     st.dataframe(fle, use_container_width=True)
