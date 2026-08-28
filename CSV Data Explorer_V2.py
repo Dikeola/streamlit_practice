@@ -11,7 +11,7 @@ def main():
     df = pd.read_csv(fle)
     
     st.sidebar.header("Filter Options")
-    columns = st.sidebar.selectbox("Select the Columns:", ['1','2'])
+    columns = st.sidebar.selectbox("Select the Columns:", [df.columns])
     st.dataframe(fle, use_container_width=True)
 if __name__ == "__main__":
   main()
