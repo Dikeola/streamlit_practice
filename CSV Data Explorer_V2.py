@@ -7,7 +7,7 @@ def main():
 
   fle = st.file_uploader("Upload your file:", type='csv')
   
-  st.subheader("Filter Options")
+  st.sidebar.header("Filter Options")
   if fle is not None:
     st.dataframe(fle, use_container_width=True)
 if __name__ == "__main__":
