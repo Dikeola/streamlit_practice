@@ -10,6 +10,8 @@ def main():
   st.sidebar.header("Filter Options")
   columns = st.sidebar.selectbox("Select the Column:", fle.columns)
   if fle is not None:
+    df = pd.read_csv(fle)
+    columns = st.sidebar.selectbox("Select the Columns:", df.columns)
     st.dataframe(fle, use_container_width=True)
 if __name__ == "__main__":
   main()
