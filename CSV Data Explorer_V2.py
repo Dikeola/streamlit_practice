@@ -8,7 +8,6 @@ def main():
   fle = st.file_uploader("Upload your file:", type='csv')
   
   st.sidebar.header("Filter Options")
-  columns = st.sidebar.selectbox("Select the Column:", fle.columns)
   if fle is not None:
     df = pd.read_csv(fle)
     columns = st.sidebar.selectbox("Select the Columns:", df.columns)
